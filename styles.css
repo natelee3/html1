@@ -9,7 +9,7 @@ h1, h2 {
     background-color: #e1eedd;
     text-align: center;
     color: #f0a04b;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    text-shadow: 2px 2px 2px #183a1d;
 }
 
 h3 {
@@ -33,6 +33,7 @@ img {
 }
 
 hr {
+    font-size: 2em;
     text-align: center;
     counter-increment: chapter;
     
