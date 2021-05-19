@@ -21,10 +21,6 @@ p {
     text-indent: 2em;
 }
 
-p.quote {
-    margin-left: 100px
-}
-
 img {
     border: 5px solid #f6c453;
     display: block;
@@ -73,4 +69,8 @@ hr::before {
     padding: 0;
     opacity: 0;
     transform: translateY(-10px);
+}
+
+p.quote {
+  text-align: center;
 }
