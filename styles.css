@@ -1,16 +1,75 @@
 body {
-    background-color: #fbfbf8;
+    background-color: #fefbe9;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:black
+    color: #183a1d;
+    counter-reset: chapter;
 }
 
-h1, h2, h3 {
+h1, h2 {
+    background-color: #e1eedd;
+    text-align: center;
+    color: #f0a04b;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+h3 {
+    background-color: #e1eedd;
     text-align: center;
 }
 
+p {
+    text-indent: 2em;
+}
+
+p.quote {
+    margin-left: 100px
+}
 
 img {
+    border: 5px solid #f6c453;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+hr {
+    text-align: center;
+    counter-increment: chapter;
+    
+  }
+
+hr::before {
+    content: 'Chapter ' counter(chapter, upper-roman);
+    display: block;
+    text-align: center;
+    background-color: #e1eedd;
+    font-size: 1.1em;
+    font-variant: small-caps;
+    letter-spacing: .05em;
+  }
+  
+  hr:hover, hr:focus {
+    border-bottom-color: rgba(255, 255, 255, .8);
+    outline: none;
+  }
+  
+  hr:not(:focus) {
+    cursor: pointer;
+  }
+
+  hr:focus ~ p {
+    height: auto;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, .2);
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  hr ~ p, hr:focus ~ hr ~ p {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-10px);
 }
